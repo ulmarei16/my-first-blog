@@ -7,10 +7,20 @@
 <body>
     <div><h1><strong>Notes from the invasion</strong></h1></div>
 
-        <div>
-            <p>Hi earthling!</p>
-            <p>We're coming for you.</p>
-        </div>
+        <!--<div>-->
+            <!--<p>Hi earthling!</p>-->
+            <!--<p>We're coming for you.</p>-->
+        <!--</div>-->
+
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr}}</p>
+            </div>
+        {% endfor %}
+
 
 </body>
 </html>
+
